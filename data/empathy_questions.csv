@@ -1,0 +1,101 @@
+﻿question_id,stage,category,question_text,intent
+1,Stage1,daily_emotion,오늘 하루 중 가장 먼저 떠오르는 장면이 있나요?,light
+2,Stage1,daily_emotion,최근에 기분이 조금이라도 좋아진 순간이 있었나요?,light
+3,Stage1,daily_emotion,요즘 편안함을 느끼는 장소가 있나요?,light
+4,Stage1,daily_emotion,하루 중 가장 좋아하는 시간대는 언제인가요?,light
+5,Stage1,daily_emotion,요즘 자주 찾게 되는 음식이 있나요?,light
+6,Stage1,daily_emotion,혹시 최근에 들었던 소리 중 인상 깊었던 게 있나요?,light
+7,Stage1,daily_emotion,기분 전환하고 싶을 때 주로 무엇을 하세요?,light
+8,Stage1,daily_emotion,요즘 좋아지는 색이 있나요?,light
+9,Stage1,daily_emotion,최근에 편안해지는 향이나 냄새가 있었나요?,light
+10,Stage1,daily_emotion,산책할 때 어디를 가장 자주 가세요?,light
+11,Stage1,daily_emotion,요즘 자주 듣는 노래나 음악 분위기가 있나요?,light
+12,Stage1,daily_emotion,아침에 일어나서 가장 먼저 하는 행동이 무엇인가요?,light
+13,Stage1,daily_emotion,휴식이 필요할 때 자연스레 손이 가는 일상이 있나요?,light
+14,Stage1,daily_emotion,최근에 웃었던 장면이 있었나요?,light
+15,Stage1,daily_emotion,좋아하는 계절이 있나요? 이유도 함께 말해주실 수 있을까요?,light
+16,Stage1,daily_emotion,잠시라도 기분이 부드러워졌던 순간이 있었나요?,light
+17,Stage1,daily_emotion,요즘 가장 편한 복장은 어떤 스타일인가요?,light
+18,Stage1,daily_emotion,"따뜻함을 느끼는 물건이 있나요? (예: 머그컵, 담요)",light
+19,Stage1,daily_emotion,잠깐이라도 집중이 잘됐던 일이 있었나요?,light
+20,Stage1,daily_emotion,최근에 ‘아 이건 좋다’라고 느낀 순간이 있었나요?,light
+21,Stage1,daily_emotion,요즘 눈에 자주 들어오는 색이나 풍경이 있나요?,light
+22,Stage1,daily_emotion,마음이 차분해지는 활동이 있나요?,light
+23,Stage1,daily_emotion,최근에 새롭게 알게 된 작은 기쁨이 있다면 무엇인가요?,light
+24,Stage1,daily_emotion,요즘 좋아하는 간식이 있나요?,light
+25,Stage1,daily_emotion,방에서 가장 좋아하는 자리나 조명이 있나요?,light
+26,Stage1,daily_emotion,최근에 하늘을 본 적 있나요? 그때 기분은 어땠나요?,light
+27,Stage1,daily_emotion,누군가와 나눈 짧은 대화 중 기억나는 게 있나요?,light
+28,Stage1,daily_emotion,요즘 자주 떠오르는 생각이 있나요?,light
+29,Stage1,daily_emotion,가볍게 몸을 움직였던 순간이 있었나요?,light
+30,Stage1,daily_emotion,최근에 조금이라도 기대됐던 순간이 있었나요?,light
+31,Stage1,daily_emotion,기분이 한결 편해지는 습관이 있나요?,light
+32,Stage1,daily_emotion,좋아하는 따뜻한 음료가 있나요?,light
+33,Stage1,daily_emotion,최근에 마음에 들어온 문장이나 말이 있었나요?,light
+34,Stage1,daily_emotion,편하게 쉴 수 있는 공간이 있다면 어디인가요?,light
+35,Stage1,daily_emotion,조용한 시간과 북적이는 시간 중에 어느 쪽이 더 좋나요?,light
+36,Stage1,daily_emotion,지금 떠오르는 가장 편안한 장면은 무엇인가요?,light
+37,Stage1,daily_emotion,오늘 마음이 조금 가벼워진 순간이 있었나요?,light
+38,Stage1,daily_emotion,요즘 자주 보고 싶은 풍경이 있나요?,light
+39,Stage1,daily_emotion,최근에 마음이 잔잔해졌던 시간이 있었나요?,light
+40,Stage1,daily_emotion,편안함을 주는 작은 루틴이 있나요?,light
+41,Stage2,memory_relationship,어린 시절 기억 중 떠오르는 따뜻한 장면이 있나요?,medium
+42,Stage2,memory_relationship,최근에 누군가에게 고맙다고 느낀 적 있나요?,medium
+43,Stage2,memory_relationship,마음이 필요한 순간 떠오르는 사람이 있나요?,medium
+44,Stage2,memory_relationship,누군가와 나눴던 대화 중 오래 기억에 남는 말이 있나요?,medium
+45,Stage2,memory_relationship,당신에게 편안함을 주는 사람은 누구인가요?,medium
+46,Stage2,memory_relationship,최근에 누군가에게 작은 도움을 준 적 있나요?,medium
+47,Stage2,memory_relationship,지금 떠오르는 소중한 기억이 있나요?,medium
+48,Stage2,memory_relationship,오래된 사진 중 마음이 편해지는 사진이 있나요?,medium
+49,Stage2,memory_relationship,가까운 사람과 함께했던 순간 중 떠오르는 장면이 있나요?,medium
+50,Stage2,memory_relationship,최근에 누군가에게 미소 지었던 기억이 있나요?,medium
+51,Stage2,memory_relationship,당신만의 '마음이 풀리는 순간'이 있나요?,medium
+52,Stage2,memory_relationship,예전에는 자주 했지만 요즘은 잘 못한 일이 있나요?,medium
+53,Stage2,memory_relationship,가까운 사람과 함께 가고 싶은 곳이 있나요?,medium
+54,Stage2,memory_relationship,최근 누군가에게 받은 작은 친절이 있었나요?,medium
+55,Stage2,memory_relationship,오랫동안 이어온 습관 중 마음이 따뜻해지는 게 있나요?,medium
+56,Stage2,memory_relationship,당신에게 편안함을 주는 말투나 목소리가 있나요?,medium
+57,Stage2,memory_relationship,가끔 떠오르는 사람의 얼굴이 있나요?,medium
+58,Stage2,memory_relationship,누군가에게 말해주고 싶은 좋은 기억이 있나요?,medium
+59,Stage2,memory_relationship,최근에 스스로에게 칭찬하고 싶은 일이 있나요?,medium
+60,Stage2,memory_relationship,마음속에 오래 남은 따뜻한 경험이 있나요?,medium
+61,Stage2,memory_relationship,누군가에게 전하고 싶은 말이 있었나요?,medium
+62,Stage2,memory_relationship,가까운 사람과 공유하면 좋을 소소한 기쁨이 있나요?,medium
+63,Stage2,memory_relationship,당신을 편안하게 하는 관계의 특징은 무엇인가요?,medium
+64,Stage2,memory_relationship,함께 웃었던 기억 중 떠오르는 장면이 있나요?,medium
+65,Stage2,memory_relationship,"최근에 '아, 이 사람 좋다'고 느낀 순간이 있었나요?",medium
+66,Stage2,memory_relationship,가까운 사람과 함께 들으면 좋을 음악이 있나요?,medium
+67,Stage2,memory_relationship,가끔 떠오르는 향이나 소리가 있나요?,medium
+68,Stage2,memory_relationship,당신에게 힘이 되었던 사람의 말이 있나요?,medium
+69,Stage2,memory_relationship,누군가와의 관계에서 가장 소중히 여기는 점은 무엇인가요?,medium
+70,Stage2,memory_relationship,당신이 누군가에게 전하고 싶은 따뜻한 말이 있나요?,medium
+71,Stage2,memory_relationship,최근에 다른 사람을 생각하며 미소 지은 적 있나요?,medium
+72,Stage2,memory_relationship,당신에게 소중한 물건이 있다면 무엇인가요?,medium
+73,Stage2,memory_relationship,누군가에게서 배운 가치 있는 태도나 말이 있나요?,medium
+74,Stage2,memory_relationship,마음을 편안하게 해주는 관계의 습관이 있나요?,medium
+75,Stage2,memory_relationship,가끔 떠올리면 위로가 되는 장면이 있나요?,medium
+76,Stage3,meaning_value,당신이 가장 소중하게 여기는 가치가 있다면 무엇인가요?,deep
+77,Stage3,meaning_value,살아오며 특별히 의미 있었던 순간이 있나요?,deep
+78,Stage3,meaning_value,당신을 당신답게 만든 경험이 있다면 무엇인가요?,deep
+79,Stage3,meaning_value,평소에 중요하게 생각하는 태도나 마음가짐이 있나요?,deep
+80,Stage3,meaning_value,누군가에게 전하고 싶은 삶의 지혜가 있나요?,deep
+81,Stage3,meaning_value,감사함을 느낄 때 떠오르는 사람은 누구인가요?,deep
+82,Stage3,meaning_value,당신에게 '평온함'이란 어떤 의미인가요?,deep
+83,Stage3,meaning_value,살아오며 배운 중요한 교훈이 있다면 무엇인가요?,deep
+84,Stage3,meaning_value,당신이 가장 자랑스러웠던 순간이 있나요?,deep
+85,Stage3,meaning_value,"어떤 순간에 '아, 이게 나구나'라고 느끼나요?",deep
+86,Stage3,meaning_value,당신에게 의미 있는 장소가 있다면 어디인가요?,deep
+87,Stage3,meaning_value,어떤 관계가 당신을 더 단단하게 만들었나요?,deep
+88,Stage3,meaning_value,스스로 가장 용기냈다고 느끼는 순간이 있나요?,deep
+89,Stage3,meaning_value,당신은 어떤 시간을 가장 소중히 여기나요?,deep
+90,Stage3,meaning_value,가장 당신다운 모습은 어떤 모습이라고 생각하나요?,deep
+91,Stage3,meaning_value,당신의 삶에서 계속 이어가고 싶은 마음가짐이 있나요?,deep
+92,Stage3,meaning_value,당신이 남기고 싶은 '작은 흔적'이 있다면 무엇인가요?,deep
+93,Stage3,meaning_value,어떤 말이 당신의 삶을 지탱해줬나요?,deep
+94,Stage3,meaning_value,당신이 기억하고 싶은 순간은 어떤 순간인가요?,deep
+95,Stage3,meaning_value,누군가에게 전하고 싶은 감사의 마음이 있나요?,deep
+96,Stage3,meaning_value,당신이 중요하게 생각하는 삶의 기준이 있나요?,deep
+97,Stage3,meaning_value,당신을 편안하게 해주는 삶의 태도가 있다면 무엇인가요?,deep
+98,Stage3,meaning_value,어떤 순간에 스스로를 인정하게 되나요?,deep
+99,Stage3,meaning_value,당신이 앞으로도 계속 지키고 싶은 마음의 자세는 무엇인가요?,deep
+100,Stage3,meaning_value,당신이 소중히 여기는 ‘평범한 순간’은 무엇인가요?,deep

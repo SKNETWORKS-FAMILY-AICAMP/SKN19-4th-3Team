@@ -1,0 +1,142 @@
+[
+  {
+    "id": "google_delete_overview_chunk_1",
+    "text": "Google 계정 삭제 개요\n\nGoogle 계정은 언제든지 삭제할 수 있지만, 일정 시간이 지나면 복구가 불가능할 수 있다. 계정 삭제는 이메일, 파일, 캘린더, 사진 등 계정에 연동된 다양한 서비스 이용에 큰 영향을 미치므로, 삭제 전 충분한 검토가 필요하다.\n\n체크리스트:\n- 계정 삭제가 가져올 영향을 미리 파악한다.\n- 삭제 전에 필요한 데이터 백업과 서비스 점검 계획을 세운다.",
+    "metadata": {
+      "source_id": "google_delete_overview",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "생전 계정 정리",
+      "category": "개요",
+      "title": "Google 계정 삭제 개요",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_step_1_meaning_chunk_1",
+    "text": "1단계: Google 계정 삭제의 의미 이해하기\n\nGoogle 계정을 삭제하면 이메일, 파일, 캘린더, 사진 등 계정에 저장된 데이터와 콘텐츠가 모두 삭제된다. 또한 Gmail, 드라이브, 캘린더, Play 등 계정 로그인 기반 Google 서비스를 이용할 수 없게 되며, YouTube 및 Google Play에서 구매한 앱, 영화, 게임, 음악, TV 프로그램 등 구독 및 콘텐츠에도 접근할 수 없다.\n\n체크리스트:\n- Gmail, Drive, 캘린더, 사진 등 삭제될 데이터를 목록화한다.\n- YouTube 및 Google Play에서 구매한 콘텐츠 접근이 끊기는 점을 인지한다.",
+    "metadata": {
+      "source_id": "google_delete_step_1_meaning",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "생전 계정 정리",
+      "category": "삭제 영향",
+      "title": "1단계: Google 계정 삭제의 의미 이해하기",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_hacked_case_chunk_1",
+    "text": "해킹된 계정을 삭제하기 전 확인해야 할 사항\n\nGoogle 계정이 해킹된 경우 계정을 바로 삭제하기보다는 먼저 보안 진단을 통해 어떤 부분이 무단 접근되었는지 확인하는 것이 권장된다. 예를 들어 Google 계정에 비밀번호를 저장해 두었다면 해커가 비밀번호에 접근했는지 확인해 변경 필요성을 판단해야 하며, 연락처를 저장해 두었다면 연락처가 다운로드되었는지 확인해 지인들에게 의심스러운 메시지에 주의하도록 알릴 수 있다. Google 월렛을 사용 중이라면 무단 결제 내역이 없는지도 살펴봐야 한다. 계정이 완전히 삭제되면 이후에는 보안 진단 도구를 활용해 계정 활동을 검토할 수 없다. 체크리스트:\n- Google 보안 진단 도구를 사용해 무단 접근 내역을 확인한다. - 저장된 비밀번호, 연락처, 결제 정보가 유출되었는지 점검하고 필요 시 변경 또는 안내를 진행한다. - 계정을 삭제할지, 복구 후 계속 사용할지 여부를 신중히 결정한다.",
+    "metadata": {
+      "source_id": "google_delete_hacked_case",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "보안 사고 후 정리",
+      "category": "보안 진단",
+      "title": "해킹된 계정을 삭제하기 전 확인해야 할 사항",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_hacked_case_chunk_2",
+    "text": "용어 정리:\n보안 진단: 계정에 무단 접근되었는지 점검하고 보안 위협을 확인할 수 있는 Google 제공 도구. Google 월렛: Google이 제공하는 결제 및 거래 관리 서비스.",
+    "metadata": {
+      "source_id": "google_delete_hacked_case",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "보안 사고 후 정리",
+      "category": "보안 진단",
+      "title": "해킹된 계정을 삭제하기 전 확인해야 할 사항",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_step_2_review_download_chunk_1",
+    "text": "2단계: 계정 정보 검토 및 데이터 다운로드\n\n계정을 삭제하기 전에는 계정에 저장된 정보를 검토하고 필요한 데이터는 모두 다운로드해야 한다. 또한 인터넷 뱅킹, 소셜 미디어, 각종 앱에서 Gmail 주소를 로그인 ID나 연락처로 사용 중인 경우에는 새로운 이메일 주소를 추가해 변경해 두어야 한다. 나중에 계정 복구를 시도할 가능성이 있다면 계정 복구 정보도 최신 상태로 업데이트해 두는 것이 좋다.\n\n체크리스트:\n- Google Takeout 등 도구를 사용해 중요한 데이터를 백업한다.\n- 인터넷 뱅킹, 소셜 미디어, 앱 등에 등록된 Gmail 주소를 다른 주소로 변경한다.\n- 계정 복구 정보(전화번호, 보조 이메일)를 확인·수정한다.\n\n용어 정리:\n계정 복구 정보: 계정 분실 시 복구를 돕기 위해 등록하는 전화번호·보조 이메일 등의 정보.",
+    "metadata": {
+      "source_id": "google_delete_step_2_review_download",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "생전 계정 정리",
+      "category": "삭제 전 준비",
+      "title": "2단계: 계정 정보 검토 및 데이터 다운로드",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_step_3_process_chunk_1",
+    "text": "3단계: Google 계정 삭제 절차\n\nGoogle 계정이 2개 이상일 경우 하나의 계정을 삭제해도 다른 계정은 삭제되지 않는다. 계정을 삭제하려면 Google 계정의 '데이터 및 개인 정보 보호' 섹션으로 이동한 뒤 ‘데이터 및 개인 정보 보호 옵션’까지 스크롤하여 ‘옵션 더보기’ 아래의 ‘Google 계정 삭제’를 선택하고 안내에 따라 삭제 절차를 진행하면 된다.\n\n체크리스트:\n- 삭제하려는 계정과 유지할 계정을 구분한다.\n- Google 계정 설정에서 '데이터 및 개인 정보 보호' 메뉴로 이동한다.\n- ‘Google 계정 삭제’ 메뉴를 찾아 안내에 따라 삭제를 완료한다.",
+    "metadata": {
+      "source_id": "google_delete_step_3_process",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "생전 계정 정리",
+      "category": "삭제 절차",
+      "title": "3단계: Google 계정 삭제 절차",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_gmail_account_chunk_1",
+    "text": "Gmail 계정만 삭제하기 개요\n\nGoogle 계정에서 Gmail만 분리하여 삭제할 수 있다. Gmail 계정을 삭제해도 Google 계정 전체가 삭제되지는 않지만, Gmail에 연결된 데이터는 삭제되며 해당 Gmail 주소로 로그인할 수 없게 된다.\n\n체크리스트:\n- Gmail만 삭제할 것인지, Google 계정 전체를 삭제할 것인지 결정한다.\n- Gmail 주소로 로그인하는 외부 서비스에 미리 다른 이메일 주소를 등록한다.",
+    "metadata": {
+      "source_id": "google_delete_gmail_account",
+      "platform": "google",
+      "service": "gmail",
+      "scenario": "서비스 개별 삭제",
+      "category": "서비스 개별 삭제",
+      "title": "Gmail 계정만 삭제하기 개요",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_gmail_only_process_chunk_1",
+    "text": "Google 계정을 유지하면서 Gmail만 삭제하는 절차\n\nGmail만 삭제하려면 Google 계정과 연결된 다른 이메일 주소가 필요하다. Gmail만 삭제하는 절차는 다음과 같다. Google 계정으로 이동해 왼쪽 메뉴에서 ‘데이터 및 개인 정보 보호’를 선택하고, ‘사용 중인 앱 및 서비스의 데이터’까지 스크롤한 뒤 ‘Google 서비스 삭제’를 선택한다. 여기에서 ‘Gmail’ 옆의 ‘삭제’를 선택하고, 로그인에 사용할 기존 이메일 주소를 입력한 후 ‘인증 메일 전송’을 누른다. 기존 이메일로 전송된 인증 메일에서 안내에 따라 인증이 완료되어야 최종적으로 Gmail 삭제가 진행된다. 체크리스트:\n- Gmail 삭제 후 사용할 다른 이메일 주소를 준비한다. - Google 계정 설정에서 ‘Google 서비스 삭제’ 메뉴로 이동해 Gmail 삭제를 선택한다. - 기존 이메일 주소로 전송된 인증 메일을 확인해 안내에 따라 인증을 완료한다.",
+    "metadata": {
+      "source_id": "google_delete_gmail_only_process",
+      "platform": "google",
+      "service": "gmail",
+      "scenario": "서비스 개별 삭제",
+      "category": "서비스 개별 삭제",
+      "title": "Google 계정을 유지하면서 Gmail만 삭제하는 절차",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_gmail_only_process_chunk_2",
+    "text": "용어 정리:\nGoogle 서비스 삭제: 계정 전체 삭제가 아니라 특정 Google 서비스(Gmail 등)만 개별적으로 삭제하는 옵션.",
+    "metadata": {
+      "source_id": "google_delete_gmail_only_process",
+      "platform": "google",
+      "service": "gmail",
+      "scenario": "서비스 개별 삭제",
+      "category": "서비스 개별 삭제",
+      "title": "Google 계정을 유지하면서 Gmail만 삭제하는 절차",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "google_delete_terms_overview_chunk_1",
+    "text": "Google 계정 삭제와 관련된 주요 용어\n\nGoogle 계정 삭제를 이해하기 위해서는 Google 계정, 보안 진단, Google 월렛, 계정 복구 정보, Google 서비스 삭제 등의 용어를 함께 이해하는 것이 도움이 된다.\n\n용어 정리:\nGoogle 계정: Gmail, Drive, YouTube 등 Google 서비스에 로그인하기 위해 사용하는 기본 계정.\n보안 진단: 계정에 무단 접근되었는지 점검하고 보안 위협을 확인할 수 있는 Google 제공 도구.\nGoogle 월렛: Google이 제공하는 결제 및 거래 관리 서비스.\n계정 복구 정보: 계정 분실 시 복구를 돕기 위해 등록하는 전화번호·보조 이메일 등.\nGoogle 서비스 삭제: 계정 전체 삭제가 아니라 특정 Google 서비스만 개별적으로 삭제하는 옵션.",
+    "metadata": {
+      "source_id": "google_delete_terms_overview",
+      "platform": "google",
+      "service": "google_account",
+      "scenario": "생전 계정 정리",
+      "category": "용어 설명",
+      "title": "Google 계정 삭제와 관련된 주요 용어",
+      "source_type": "official_policy",
+      "updated_at": null
+    }
+  }
+]

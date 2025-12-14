@@ -1,0 +1,156 @@
+[
+  {
+    "id": "naver_withdrawal_overview_chunk_1",
+    "text": "네이버 회원 탈퇴 전 유의사항 안내\n\n네이버 회원 탈퇴를 원활하게 진행하기 위해서는 탈퇴 전 반드시 확인해야 할 사항들이 있다. 단체 아이디 관리, Npay 및 부가 서비스 해지, 카페 매니저 권한 위임, 게시물 처리, 데이터 파기, 해피빈 콩 사용, 네이버 인증서 해지 등을 사전에 점검해야 한다.\n\n체크리스트:\n- 단체 아이디 관리 위임 여부를 확인한다.\n- Npay 및 각종 유료·연계 서비스 해지 여부를 확인한다.\n- 카페 매니저 권한이 있다면 위임을 완료한다.\n- 게시판형 서비스에 남아 있는 게시물 처리 여부를 검토한다.\n- 개인형 서비스 데이터 파기 및 백업 여부를 확인한다.\n- 해피빈 콩 사용 여부를 확인한다.\n- 네이버 인증서 해지 여부를 확인한다.",
+    "metadata": {
+      "source_id": "naver_withdrawal_overview",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "개요",
+      "title": "네이버 회원 탈퇴 전 유의사항 안내",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_01_chunk_1",
+    "text": "단체 아이디 관리자 위임 후 탈퇴\n\n(구) 단체 아이디의 관리자는 탈퇴 전에 반드시 관리 권한을 다른 사용자에게 위임해야 한다. 단체 계정에 관리자가 남아 있지 않으면 단체 서비스 운영에 문제가 생길 수 있다.\n\n체크리스트:\n- 본인 계정이 단체 아이디의 관리자 역할을 하고 있는지 확인한다.\n- 새로운 관리자를 정하고 관리자 권한을 위임한다.\n- 관리자 위임이 완료된 뒤에 회원 탈퇴를 진행한다.\n\n용어 정리:\n단체 아이디: 단체(회사·동아리 등)에서 공동으로 사용하는 대표 계정.\n관리자 위임: 단체 아이디의 관리 권한을 다른 사용자에게 넘기는 작업.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_01",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "단체 아이디 관리자 위임 후 탈퇴",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_02_chunk_1",
+    "text": "Npay 및 부가 서비스 해지 후 탈퇴\n\nNpay, 부동산 중개업소, 애드포스트 등의 서비스를 이용 중인 경우에는 먼저 해당 서비스에서 탈퇴·해지한 뒤 네이버 회원 탈퇴를 진행해야 한다. 계정을 바로 탈퇴하면 정산, 결제, 광고 수익 등에서 문제가 발생할 수 있다.\n\n체크리스트:\n- Npay, 부동산 중개업소, 애드포스트 등 연계 서비스 이용 여부를 확인한다.\n- 각 서비스 내에서 탈퇴 또는 해지 절차를 먼저 진행한다.\n- 정산·결제·광고 수익 등에 미정산 내역이 없는지 점검한다.\n\n용어 정리:\nNpay: 네이버에서 제공하는 온라인 간편결제 서비스.\n애드포스트: 네이버 블로그·카페 등에 광고를 게재해 수익을 얻는 서비스.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_02",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "Npay 및 부가 서비스 해지 후 탈퇴",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_03_chunk_1",
+    "text": "카페 매니저 권한 위임\n\n매니저로 활동 중인 네이버 카페가 있는 경우, 회원 탈퇴 전 반드시 매니저 권한을 다른 회원에게 위임해야 한다. 그렇지 않으면 카페 운영에 공백이 생길 수 있다.\n\n체크리스트:\n- 현재 매니저 권한을 보유한 카페가 있는지 확인한다.\n- 카페 내에서 매니저 권한 위임 절차를 진행한다.\n- 위임이 완료된 후에 네이버 회원 탈퇴를 요청한다.\n\n용어 정리:\n매니저: 네이버 카페 운영을 담당하는 관리자 역할.\n매니저 위임: 카페 운영 권한을 다른 사용자에게 넘기는 과정.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_03",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "카페 매니저 권한 위임",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_04_chunk_1",
+    "text": "게시판형 서비스 게시물 처리\n\n지식iN, 카페, 뉴스, 웹툰, 웹소설 등 게시판형 서비스에 등록한 게시물은 회원 탈퇴 후에도 남아 있다. 글이 남아 있는 것을 원치 않는다면 탈퇴 전에 직접 비공개 처리 또는 삭제를 해야 한다.\n\n체크리스트:\n- 지식iN, 카페, 뉴스, 웹툰, 웹소설 등 내가 작성한 게시물이 있는지 확인한다.\n- 남겨두고 싶은 게시물과 삭제·비공개할 게시물을 구분한다.\n- 탈퇴 전에 게시물 삭제 또는 비공개 처리를 완료한다.\n\n용어 정리:\n게시판형 서비스: 사용자가 글을 올릴 수 있는 형태의 서비스 전반(지식iN, 카페 등).",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_04",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "게시판형 서비스 게시물 처리",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_05_chunk_1",
+    "text": "개인형 서비스 데이터 파기\n\n회원 탈퇴를 하면 메일, 블로그, 네이버 MYBOX, 주소록, 해피빈, 온라인 게임, QR코드 등의 개인형 서비스 데이터는 보안 규정에 따라 파기되어 복구할 수 없다.\n\n체크리스트:\n- 메일, 블로그, MYBOX, 주소록 등 개인 데이터의 백업 필요 여부를 확인한다.\n- 필요한 데이터가 있다면 탈퇴 전에 내보내기 또는 백업을 진행한다.\n- 탈퇴 후에는 해당 데이터가 복구되지 않는다는 점을 인지한다.\n\n용어 정리:\n데이터 파기: 보안 규정에 따라 사용자 데이터를 영구 삭제하는 처리.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_05",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "개인형 서비스 데이터 파기",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_06_chunk_1",
+    "text": "해피빈 콩 사용 후 탈퇴\n\n해피빈 콩이 남아 있는 경우 탈퇴 전에 모두 기부하거나 사용할 것을 권장한다. 회원 탈퇴 후에는 해피빈 콩을 사용할 수 없다.\n\n체크리스트:\n- 현재 보유 중인 해피빈 콩 잔액을 확인한다.\n- 탈퇴 전에 원하는 곳에 해피빈 콩을 기부하거나 사용한다.\n\n용어 정리:\n해피빈 콩: 네이버 기부 플랫폼 해피빈에서 기부할 때 사용하는 포인트 형태의 자원.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_06",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "해피빈 콩 사용 후 탈퇴",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_req_07_chunk_1",
+    "text": "네이버 인증서 해지 후 탈퇴\n\n네이버 인증서 서비스를 이용 중이라면 회원 탈퇴 전 인증서를 해지해야 한다. 인증서가 남아 있으면 다른 서비스 이용에 혼선이 생길 수 있다.\n\n체크리스트:\n- 네이버 인증서 등록 여부를 확인한다.\n- 인증서 관리 메뉴에서 인증서 해지 절차를 진행한다.\n- 인증서 해지 후 회원 탈퇴를 완료한다.\n\n용어 정리:\n네이버 인증서: 전자서명·본인인증에 사용되는 네이버의 디지털 인증 서비스.",
+    "metadata": {
+      "source_id": "naver_withdrawal_req_07",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 전 준비사항",
+      "title": "네이버 인증서 해지 후 탈퇴",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_after_01_chunk_1",
+    "text": "회원 탈퇴 후 개인정보 처리\n\n회원 탈퇴 후에는 지체 없이 개인정보를 파기하며, 이후 재가입이 가능하다. 다만 부정 이용 방지를 위해 명의를 구분할 수 있는 정보는 6개월간 보관한다.\n\n체크리스트:\n- 탈퇴 후 개인정보가 파기된다는 점을 이해한다.\n- 부정 이용 방지를 위해 일정 기간 일부 정보가 보관될 수 있음을 인지한다.",
+    "metadata": {
+      "source_id": "naver_withdrawal_after_01",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 후 처리",
+      "title": "회원 탈퇴 후 개인정보 처리",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_after_02_chunk_1",
+    "text": "재가입 조건 및 제한\n\n회원 탈퇴 후에는 탈퇴한 아이디로 다시 가입할 수 없으며, 아이디 및 데이터는 복구할 수 없다. 또한 부정 이용 방지를 위한 보관 기간 동안에는 동일 명의의 실명 아이디를 새로 생성할 수 없다.\n\n체크리스트:\n- 같은 아이디로는 재가입이 불가능하다는 점을 인지한다.\n- 동일 명의 실명 아이디 신규 생성이 일정 기간 제한될 수 있음을 이해한다.",
+    "metadata": {
+      "source_id": "naver_withdrawal_after_02",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 후 처리",
+      "title": "재가입 조건 및 제한",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  },
+  {
+    "id": "naver_withdrawal_rejoin_rule_chunk_1",
+    "text": "탈퇴 후 재가입 가능 시점 안내\n\n가입 후 1개월 내에 탈퇴한 경우에는 최근 가입일로부터 1개월이 지나야 재가입이 가능하다. 가입 후 1개월이 지난 상태에서 탈퇴하더라도 데이터 파기 및 처리에 시간이 필요하므로 즉시 재가입은 어렵다.\n\n체크리스트:\n- 가입 후 1개월 내 탈퇴한 경우 재가입 가능 시점을 확인한다.\n- 1개월이 지난 뒤 탈퇴하는 경우에도 즉시 재가입이 되지 않을 수 있음을 이해한다.",
+    "metadata": {
+      "source_id": "naver_withdrawal_rejoin_rule",
+      "platform": "naver",
+      "service": "naver_id",
+      "scenario": "생전 계정 정리",
+      "category": "탈퇴 후 처리",
+      "title": "탈퇴 후 재가입 가능 시점 안내",
+      "source_type": "support_page",
+      "updated_at": null
+    }
+  }
+]

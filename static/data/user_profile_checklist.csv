@@ -1,0 +1,4 @@
+question_id,section,category,question_kr,input_type,options_kr
+A1,basic,이름/호칭,"어떻게 불러드리면 편하실까요? (이름이나 별칭을 알려주세요)",text_short,
+A2,basic,움직임/기동성,"평소 이동이나 움직임은 어느 정도 가능하신가요?",single_choice,"걷기가 비교적 편하다;천천히라면 걷기는 가능하다;실내에서만 주로 움직인다;대부분 누워 지낸다"
+B1,emotion,현재 마음,"요즘 마음 상태를 한 단어로 표현한다면 어떤 느낌에 가까우신가요?",single_choice,"불안하다;무기력하다;외롭다;혼란스럽다;슬프다;그래도 꽤 평온하다;말로 표현하기 어렵다"

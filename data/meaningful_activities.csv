@@ -1,0 +1,61 @@
+activity_id,activity_kr,category,ENERGY_REQUIRED,meaning_level,dignity_preserving,requires_help,location,FEELING_TAGS
+1,창문 열고 바람 쐬기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+2,따뜻한 차 마시기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+3,옛날 사진 보기,회상,1,3,TRUE,FALSE,indoor,"사회적 연결, 평온/이완"
+4,좋아하는 음악 듣기,감각,1,2,TRUE,FALSE,indoor,"유머/기쁨, 평온/이완"
+5,가족에게 안부 문자 보내기,연결,1,3,TRUE,FALSE,any,사회적 연결
+6,일기 쓰기,유산,1,3,TRUE,FALSE,indoor,"성취감/자존감, 자기 성찰/영적"
+7,손편지 쓰기,유산,1,3,TRUE,FALSE,indoor,"성취감/자존감, 사회적 연결"
+8,기도하기,영성,1,3,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+9,명상하기,영성,1,2,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+10,혼자 생각하기,성찰,1,2,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+11,꽃·식물 보기,감각,1,1,TRUE,FALSE,any,평온/이완
+12,하늘·구름 보기,감각,1,1,TRUE,FALSE,any,평온/이완
+13,별·달 보기,감각,1,2,TRUE,FALSE,any,평온/이완
+14,자연의 소리 듣기,감각,1,1,TRUE,FALSE,any,평온/이완
+15,새 소리 듣기,감각,1,1,TRUE,FALSE,any,평온/이완
+16,비 소리 듣기,감각,1,1,TRUE,FALSE,any,평온/이완
+17,좋아하는 향 맡기,감각,1,1,TRUE,FALSE,any,평온/이완
+18,부드러운 이불 만지기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+19,담요에 몸 감싸기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+20,따뜻한 물 마시기,감각,1,1,TRUE,FALSE,any,평온/이완
+21,햇빛 쬐기,감각,1,1,TRUE,FALSE,any,평온/이완
+22,아침 햇살 받기,감각,1,1,TRUE,FALSE,any,평온/이완
+23,전화 통화하기,연결,1,2,TRUE,FALSE,indoor,사회적 연결
+24,친구와 함께 있기,연결,1,3,TRUE,FALSE,any,사회적 연결
+25,가족과 함께 있기,연결,1,3,TRUE,FALSE,any,"사회적 연결, 평온/이완"
+26,손주와 함께 있기,연결,1,3,TRUE,FALSE,any,"사회적 연결, 평온/이완"
+27,반려동물과 있기,연결,1,2,TRUE,FALSE,any,사회적 연결
+28,옛날 이야기 나누기,회상,1,3,TRUE,FALSE,any,사회적 연결
+29,자녀·손주 이야기하기,회상,1,3,TRUE,FALSE,any,"사회적 연결, 평온/이완"
+30,좋아하는 사람 생각하기,성찰,1,2,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+31,가장 행복했던 순간 떠올리기,회상,1,3,TRUE,FALSE,any,평온/이완
+32,감사한 것들 생각하기,성찰,1,3,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+33,소설·시 읽기,감각,1,2,TRUE,FALSE,any,평온/이완
+34,좋아하는 시 읽기,감각,1,2,TRUE,FALSE,indoor,평온/이완
+35,잡지 읽기,감각,1,1,TRUE,FALSE,any,평온/이완
+36,만화·웹툰 읽기,감각,1,1,TRUE,FALSE,any,"유머/기쁨, 평온/이완"
+37,좋아하는 영상 시청,감각,1,1,TRUE,FALSE,indoor,사회적 연결
+38,영화 보기,감각,2,2,TRUE,TRUE,any,"사회적 연결, 유머/기쁨, 평온/이완"
+39,TV 보기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+40,라디오 듣기,감각,1,1,TRUE,FALSE,indoor,평온/이완
+41,그냥 눈 감고 쉬기,휴식,1,1,TRUE,FALSE,any,평온/이완
+42,낮잠 자기,휴식,1,1,TRUE,FALSE,any,평온/이완
+43,편한 자세로 눕기,휴식,1,1,TRUE,FALSE,indoor,평온/이완
+44,베개 베고 쉬기,휴식,1,1,TRUE,FALSE,indoor,평온/이완
+45,평화롭고 조용한 시간 보내기,휴식,1,2,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+46,혼자 있기,휴식,1,1,TRUE,FALSE,any,"자기 성찰/영적, 평온/이완"
+47,간단한 그림 그리기,창작,1,2,TRUE,FALSE,indoor,성취감/자존감
+48,낙서하기,창작,1,1,TRUE,FALSE,indoor,평온/이완
+49,색칠하기,창작,1,1,TRUE,FALSE,indoor,평온/이완
+50,종이학 접기,창작,1,1,TRUE,FALSE,indoor,평온/이완
+51,미래를 위한 편지 쓰기,유산,1,3,TRUE,FALSE,indoor,"성취감/자존감, 자기 성찰/영적"
+52,감사 편지 쓰기,유산,1,3,TRUE,FALSE,indoor,"성취감/자존감, 사회적 연결"
+53,용서 편지 쓰기,유산,1,3,TRUE,FALSE,indoor,"자기 성찰/영적, 평온/이완"
+54,인생 이야기 녹음하기,유산,2,3,TRUE,TRUE,indoor,"성취감/자존감, 자기 성찰/영적"
+55,레시피 적어두기,유산,1,3,TRUE,FALSE,indoor,성취감/자존감
+56,가족에게 조언 남기기,유산,1,3,TRUE,FALSE,indoor,"성취감/자존감, 사회적 연결"
+57,고백·사과하기,연결,1,3,TRUE,FALSE,any,사회적 연결
+58,사랑 표현하기,연결,1,3,TRUE,FALSE,any,사회적 연결
+59,용서 구하기,연결,2,3,TRUE,FALSE,any,"자기 성찰/영적, 사회적 연결"
+60,감사 표현하기,연결,1,3,TRUE,FALSE,any,사회적 연결

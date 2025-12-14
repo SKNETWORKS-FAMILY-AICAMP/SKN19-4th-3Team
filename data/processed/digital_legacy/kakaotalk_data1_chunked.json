@@ -1,0 +1,86 @@
+[
+  {
+    "id": "kakao_retire_step_01_chunk_1",
+    "text": "카카오톡 계정 탈퇴 절차\n\n카카오톡 계정 탈퇴는 전체설정 → 개인/보안 → 개인정보 관리 → 카카오톡 탈퇴 순서로 진행한다. 사용자는 탈퇴 전 유의사항을 확인해야 한다.",
+    "metadata": {
+      "source_id": "kakao_retire_step_01",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_step",
+      "title": "카카오톡 계정 탈퇴 절차",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  },
+  {
+    "id": "kakao_retire_notice_01_chunk_1",
+    "text": "카카오톡 탈퇴 시 삭제되는 데이터\n\n카카오톡 계정을 탈퇴하면 프로필, 친구 목록, 대화 내용, 운영 중인 오픈채팅, 구입한 아이템, 선물 받은 아이템 및 사용자가 설정한 모든 정보가 삭제되며 복구가 불가능하다.",
+    "metadata": {
+      "source_id": "kakao_retire_notice_01",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_notice",
+      "title": "카카오톡 탈퇴 시 삭제되는 데이터",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  },
+  {
+    "id": "kakao_retire_notice_02_chunk_1",
+    "text": "카카오톡 탈퇴 시 대화방 및 파일 삭제\n\n카카오톡 계정을 탈퇴하면 참여 중인 모든 대화방에서 자동으로 나가며, 대화방 내에서 주고받은 사진과 파일 등 모든 정보가 즉시 삭제된다. 톡클라우드에 저장된 일부 데이터도 삭제되므로 필요한 파일은 탈퇴 전에 저장해야 한다.",
+    "metadata": {
+      "source_id": "kakao_retire_notice_02",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_notice",
+      "title": "카카오톡 탈퇴 시 대화방 및 파일 삭제",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  },
+  {
+    "id": "kakao_retire_notice_03_chunk_1",
+    "text": "카카오톡 탈퇴와 구독 서비스 해지\n\n톡클라우드, 이모티콘 플러스 등의 구독 서비스는 카카오톡 계정 탈퇴와 별개로 My 구독 또는 인앱결제가 진행 중인 앱마켓에서 개별적으로 해지해야 한다.",
+    "metadata": {
+      "source_id": "kakao_retire_notice_03",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_notice",
+      "title": "카카오톡 탈퇴와 구독 서비스 해지",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  },
+  {
+    "id": "kakao_retire_notice_04_chunk_1",
+    "text": "카카오톡 탈퇴 시 추모 프로필 및 대리인 설정 영향\n\n카카오톡 계정을 탈퇴하면 설정된 추모 프로필과 대리인 지정이 모두 취소되며, 대리인이 보유한 권한은 즉시 해제된다. 관련 내용은 대리인에게 안내된다.",
+    "metadata": {
+      "source_id": "kakao_retire_notice_04",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_notice",
+      "title": "카카오톡 탈퇴 시 추모 프로필 및 대리인 설정 영향",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  },
+  {
+    "id": "kakao_retire_notice_05_chunk_1",
+    "text": "카카오톡 탈퇴 시 프로필 피드 데이터 삭제 및 백업\n\n카카오톡 계정을 탈퇴하면 사용자가 작성하거나 생성한 프로필 피드 데이터가 모두 삭제되며 복구 및 백업이 불가능하다. 백업을 원할 경우 탈퇴 전에 더보기 > 설정 > 개인/보안 > 개인정보 관리에서 데이터를 백업해야 한다.",
+    "metadata": {
+      "source_id": "kakao_retire_notice_05",
+      "platform": "kakao",
+      "service": null,
+      "scenario": null,
+      "category": "retire_notice",
+      "title": "카카오톡 탈퇴 시 프로필 피드 데이터 삭제 및 백업",
+      "source_type": null,
+      "updated_at": "2025-11"
+    }
+  }
+]
