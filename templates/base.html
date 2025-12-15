@@ -1,6 +1,7 @@
 {% load static %}
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,14 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% block extra_head %}{% endblock %}
 </head>
+
 <body>
-  <div class="app" data-current-page="home">
+  <div class="app" data-current-page="{{ current_page|default:'home' }}">
     {% block content %}{% endblock %}
   </div>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="{% static 'js/app.js' %}" defer></script>
+  <script src="{% static 'js/app.js' %}?v=2025-12-13-3" defer></script>
   {% block extra_scripts %}{% endblock %}
 </body>
+
 </html>

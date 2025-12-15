@@ -1,5 +1,9 @@
 > SK네트웍스 Family AI 캠프 19기 4차 프로젝트  
+<<<<<<< HEAD
 > 개발기간: 25.11.12 ~ 25.11.25 <br>
+=======
+> 개발기간: 25.11.26 ~ 25.12.17 <br>
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 > 주제 : LLM을 연동한 내외부 문서 기반 질의 응답 시스템
 
 <br>
@@ -14,9 +18,15 @@
 4. [시스템 아키텍처](#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98)
 5. [WBS](#-wbs)
 6. [요구사항 명세서](#%EF%B8%8F%E2%83%A3-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD-%EB%AA%85%EC%84%B8%EC%84%9C)
+<<<<<<< HEAD
 7. [수집한 데이터 및 전처리 요약](#%EF%B8%8F-%EC%88%98%EC%A7%91%ED%95%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%8F-%EC%A0%84%EC%B2%98%EB%A6%AC-%EC%9A%94%EC%95%BD)
 8. [DB 연동 구현 코드](#db-%EC%97%B0%EB%8F%99-%EA%B5%AC%ED%98%84-%EC%BD%94%EB%93%9C)
 9. [테스트 계획 및 결과 보고서](#-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B3%84%ED%9A%8D-%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%EB%B3%B4%EA%B3%A0%EC%84%9C)
+=======
+7. [화면 설계서](#️-화면-설계서)
+8. [테스트 계획 및 결과 보고서](#-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B3%84%ED%9A%8D-%EB%B0%8F-%EA%B2%B0%EA%B3%BC-%EB%B3%B4%EA%B3%A0%EC%84%9C)
+9. [3차에서의 개선 사항](#-3차에서의-개선-사항)
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 10. [트러블 슈팅](#-%ED%8A%B8%EB%9F%AC%EB%B8%94%EC%8A%88%ED%8C%85)
 11. [수행결과(시연 페이지)](#-%EC%88%98%ED%96%89%EA%B2%B0%EA%B3%BC%EC%8B%9C%EC%97%B0-%ED%8E%98%EC%9D%B4%EC%A7%80)
 12. [한 줄 회고](#%EF%B8%8F-%ED%95%9C-%EC%A4%84-%ED%9A%8C%EA%B3%A0)
@@ -63,7 +73,12 @@
    -   독거노인 + 1인 가구 증가
    -   무연고자 사망 증가
 
+<<<<<<< HEAD
 ## 관련 기사
+=======
+<details>
+<summary>관련 기사</summary>
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 
 ### ■ 무연고 사망 증가
 
@@ -115,6 +130,11 @@
 	
 ### "이러한 배경에서 저희는 **신뢰할 수 있는 안내/대화 서비스의 필요성**을 느끼고 도움을 줄 수 있는 챗봇을 구상하게 되었습니다."
 
+<<<<<<< HEAD
+=======
+</details>
+
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 - ### **프로젝트 목표**
 
 1.  **핵심 정보 제공**: 상속·장례·인터넷 개인정보 처리 등 삶의 마무리에 필요한 정보를 정확하게 안내
@@ -139,7 +159,11 @@
 | **Embedding Model** | [![text-embedding-3-small](https://img.shields.io/badge/text--embedding--3--small-00A67D?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/guides/embeddings) |
 | **Vector DB**       | [![Pinecone](https://img.shields.io/badge/Pinecone-0075A8?style=for-the-badge&logo=pinecone&logoColor=white)](https://www.pinecone.io/) |
 | **Orchestration / RAG** | [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://www.langchain.com/) [![LangGraph](https://img.shields.io/badge/LangGraph-000000?style=for-the-badge)](https://langchain-ai.github.io/langgraph/) |
+<<<<<<< HEAD
 | **Frontend** | ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black) |
+=======
+| **Web Framework** | ![Django](https://img.shields.io/badge/DJANGO-092E20?style=for-the-badge&logo=django&logoColor=white) |
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 | **Development Env** | [![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/) [![Conda](https://img.shields.io/badge/Conda-3EB049?style=for-the-badge&logo=anaconda&logoColor=white)](https://www.anaconda.com/)
 
 <br>
@@ -150,6 +174,7 @@
 
 ### 프로젝트 구조
 
+<<<<<<< HEAD
 ```
 ├── assets/                     
 ├── chatbot/
@@ -186,6 +211,11 @@
 
 
 
+=======
+<br>
+
+### 시스템 아키텍처 구조도
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 
 <br>
 
@@ -193,14 +223,18 @@
 
 # 📅 WBS
 
+<<<<<<< HEAD
 <img src="data/image/wbs-preview.png" width="700">
 
+=======
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 <br>
 
 ---
 
 # *️⃣ 요구사항 명세서
 
+<<<<<<< HEAD
 ### 기능 요구 사항
 
 | ID | 기능명 | 기능 설명 | 우선순위 | 평가기준 | 평가 |
@@ -218,11 +252,37 @@
 | NFR-01 | 성능 | 사용자의 질문에 대해 RAG 검색 및 답변 생성을 포함한 전체 응답 시간을<br>평균 5초 이내로 유지해야 한다 | High | 50개 이상의 테스트 질문에 대해 전체 응답 시간 평균 5초 이내<br>응답 시간이 10초를 초과하는 요청 비율 5% 이하 | X(응답 속도 개선 요망) |
 | NFR-02 | 정확성·신뢰성 | 시스템은 내부·외부 문서를 기반으로 정보를 제공할 때<br>근거 문서와 모순되는 사실 오류를 최소화해야 한다 | High | 테스트용 질문 50개 중 사실 오류가 포함된 응답 2건 이하<br>출처 또는 근거 문장을 함께 제시한 응답 비율 90% 이상 | ○ |
 | NFR-03 | 사용성 | UI는 고령층 사용자도 혼자 사용할 수 있을 정도로 단순하고 직관적이어야 하며<br>글자 크기와 대비가 충분해야 한다 | Medium | 핵심 기능(입력창, 전송 버튼 등)은 한 화면 내에서 모두 보일 것<br>기본 폰트 크기 14pt 이상, 주요 안내 문구 16pt 이상 | X(폰트 크기 개선 요망) |
+=======
+**시작 페이지 관리 (SP)**
+
+<img src="data/image/sp.png"><br>
+
+**안내 페이지 관리 (INFO)**
+
+<img src="data/image/info.png"><br>
+
+**채팅 페이지 관리 (CHAT)**
+
+<img src="data/image/chat.png"><br>
+
+**회원 관리 (MBM)**
+
+<img src="data/image/mbm.png"><br>
+
+**세션 관리 (SES)**
+
+<img src="data/image/ses.png"><br>
+
+**비기능 요구 사항 (NFR)**
+
+<img src="data/image/nfr.png"><br>
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 
 <br>
 
 ---
 
+<<<<<<< HEAD
 # 🗃️ 수집한 데이터 및 전처리 요약
 
 ### 수집한 데이터 목록
@@ -474,6 +534,25 @@ PDF 파싱 라이브러리로 PyMuPDF를 사용.
 # 💾DB 연동 구현 코드
 
 [연동 구현 코드](https://github.com/SKN19-3rd-4th-Project/Well-dying/blob/main/chatbot/chatbot_modules/search_info.py)
+=======
+# 🖥️ 화면 설계서
+
+<img src="data/image/start_page.png"><br>
+
+<img src="data/image/info_page.png"><br>
+
+<img src="data/image/login_page.png"><br>
+
+<img src="data/image/signup_page1.png"><br>
+
+<img src="data/image/signup_page2.png"><br>
+
+<img src="data/image/infochat_page.png"><br>
+
+<img src="data/image/chat_page.png"><br>
+
+<img src="data/image/diary_page.png"><br>
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 
 <br>
 
@@ -481,6 +560,7 @@ PDF 파싱 라이브러리로 PyMuPDF를 사용.
 
 # 💡 테스트 계획 및 결과 보고서
 
+<<<<<<< HEAD
 ### 1. 인터넷 계정 관리 정보
 #### 질문 1 :
 사망 전 카카오톡 계정 처리 방법에는 어떤 게 있고, 어떤 기능을 제공하나요?
@@ -765,14 +845,67 @@ Google 계정을 생전에 삭제하지 않고 사망 후 장기간 사용하지
 
    → 청크 분할이 잘못되어 단계 정보(step_01, step_02)가 서로 다른 파일에 흩어져 있었음. 원문을 step 단위로 다시 청킹하고 관련 문장끼리 하나의 chunk_id로 묶음.
 
+=======
+### 기능적 테스트
+
+입력 처리 검증
+
+- 정상 입력 / 비정상 입력 / 빈 값 처리
+
+응답 구조의 일관성 확인
+
+- 반환되는 메시지 또는 데이터의 필드가 스키마에 맞게 구성되어 있는지 확인
+
+탭 간 이동 플로우 검증
+
+- 정보 → 대화 → 다이어리 이동 시 UI 흐름이 깨지지 않는지 확인
+
+결과 반영 확인
+
+- 백엔드 처리 결과가 프론트에 즉시 반영되는지(응답 지연, 잘못된 렌더링 등)
+
+### 비기능적 테스트
+
+응답 속도
+
+- 동일 요청 3회 반복 시 응답 지연 편차 확인
+
+오류 및 예외 처리
+
+- 400/500 발생 시 사용자 친화적 메시지 노출 여부
+
+접근성(WCAG Level AA)
+
+- 텍스트 대비, 버튼 크기, 포커스 이동 등 공통 UI 요소 준수 여부
+
+안정성
+
+- 서버 재시작, 새로고침 후 기능 유지 여부(세션·상태 값 점검)
+
+<br>
+
+---
+
+# 🪜 3차에서의 개선 사항
+
+<br>
+
+---
+
+# 🐛 트러블슈팅
+
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 <br>
 
 ---
 
 # 🤖 수행결과(시연 페이지)
 
+<<<<<<< HEAD
 <img src="data/image/preview_image1.png" width="300"> <img src="data/image/preview_image2.png" width="300">
 
+=======
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545
 <br>
 
 ---
@@ -781,8 +914,16 @@ Google 계정을 생전에 삭제하지 않고 사망 후 장기간 사용하지
 
 | 이름 | 회고 |
 |----------|-------------|
+<<<<<<< HEAD
 | 배상준 | 사람을 위로해주는 챗봇이라는 주제가 매우 신선한 경험이었고, '감성적인' 서비스를 제공하기 위해 LLM에게 무엇이 필요한지를 깊게 고민해볼 수 있는 프로젝트였습니다. 수치화하기 어려운 사용자의 어투나 성향 등의 요소를 프롬프트와 알고리즘적으로 판별하기 위해 다양한 시도를 해보는게 재미있었습니다. |
 | 박소희 | 평소에 깊게 생각하지 못했던 주제에 대해 깊게 생각해 볼 수 있는 계기가 되었던 것 같습니다. 대화 탭을 구현하며, 어떻게 사용자에 맞춰서 최적의 경험을 제공할 수 있을까 고민해볼 수 있는 뜻 깊은 프로젝트였습니다. 중요 단어를 골라와 유사도 검색으로 관련있는 질문을 뽑아볼 수 있게 했는데 해당 경험이 기억에 많이 남습니다. |
 | 이승원 | 벡터 유사도를 통한 검색의 한계를 알 수 있었고, 이를 해결하기 위해 filter(parameter)활용, 2번 검색, page_content 수정 등 다양한 방법을 사용해 볼 수 있었다. LLM이 Tool을 잘 사용하도록 프롬프팅과 docstring 수정에서 실험적 시도를 할 수 있었다. |
 | 김성욱 | 3차 프로젝트를 진행하며 팀원들의 친절한 배려 속에서 즐겁게 배우고 성장할 수 있었고, 특히 각자 데이터 수집 과정을 분담해 진행한 점이 큰 도움이 되었습니다. 또한 개인 아이디어 제안 시에는 말로만 전달하던 내용을 문서화해 제출하면서 부족했던 부분을 보완할 수 있었고, 이번 경험을 통해 유저 관점에서 깊이 고민하는 계기가 되었습니다. |
 | 박진형 | 디지털 유산이라는 항목에 흥미가 있어 조사했으나, 국내 서비스 중 유의미한 데이터가 많이 없어 아쉬웠다. RAG의 장점을 잘 살릴 수 있는 LLM 챗봇 완성을 위해 다른 데이터를 찾아 보완하겠다고 계획하고, 문답 파이프라인 설계 과정에서 테스트를 많이 진행해 결과물에 오류가 없게 해야겠다고 다짐했다. |
+=======
+| 배상준 |  |
+| 박소희 |  |
+| 이승원 |  |
+| 김성욱 |  |
+| 박진형 |  |
+>>>>>>> 2b36d59460075e4d6fb03200dab3da7a0fe0a545

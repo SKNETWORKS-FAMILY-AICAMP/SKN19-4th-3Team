@@ -104,9 +104,18 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev ask-nav"></div>
-            <div class="swiper-button-next ask-nav"></div>
-            <div class="swiper-pagination ask-dots"></div>
+          </div>
+
+          <div class="ask-controls" aria-label="질문 슬라이더 내비게이션">
+            <button type="button" class="swiper-button-prev ask-nav">
+              <span class="nav-text" aria-hidden="true">&lt;</span>
+              <span class="sr-only">이전 질문</span>
+            </button>
+            <div class="swiper-pagination ask-dots" aria-hidden="true"></div>
+            <button type="button" class="swiper-button-next ask-nav">
+              <span class="nav-text" aria-hidden="true">&gt;</span>
+              <span class="sr-only">다음 질문</span>
+            </button>
           </div>
 
           <div class="ask-question-chip">서울 종로구에 있는 장례식장 좀 알려줘</div>
@@ -226,7 +235,6 @@
 
   <section class="diary page-section" data-page="diary" hidden>
     <div class="container">
-      <h1 class="diary-main-title">나의 다이어리</h1>
       <div class="calendar-layout">
         <div class="calendar-container">
           <div class="calendar-header">

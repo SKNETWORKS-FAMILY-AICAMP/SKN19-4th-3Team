@@ -32,7 +32,7 @@ urlpatterns = [
     path("api/signup/", signup_api, name="api_signup"),
     path("api/login/", login_api, name="api_login"),
     path("api/withdraw/", withdraw_api, name="api_withdraw"),
+    path("api/diary/generate/", generate_diary, name="api_generate_diary"),
     path("api/diaries/", get_diaries, name="api_diaries"),
     path("api/diary/<str:date>/", get_diary_detail, name="api_diary_detail"),
-    path("api/diary/generate/", generate_diary, name="api_generate_diary"),
 ]

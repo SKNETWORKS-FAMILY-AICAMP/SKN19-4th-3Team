@@ -9,7 +9,7 @@ from django.views.decorators.http import require_http_methods
 import json
 import sys
 import os
-
+from django.middleware.csrf import get_token
 # Add chatbot directory to Python path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHATBOT_DIR = os.path.join(BASE_DIR, 'chatbot')
@@ -32,15 +32,21 @@ def get_conversation_engine():
 def index(request, page: str = "home"):
     """Serve the main landing page with the requested section active."""
     safe_page = page if page in {"home", "services", "chat", "diary"} else "home"
+    # Ensure CSRF token cookie is set for frontend fetch requests
+    get_token(request)
     response = render(request, "index.html", {"current_page": safe_page})
-    
-    # Check for user_uuid cookie
-    if "user_uuid" not in request.COOKIES:
+
+    # 비로그인 사용자는 매 방문마다 새 user_uuid를 발급해 세션 간 기록을 연결하지 않음
+    if not request.user.is_authenticated:
         engine = get_conversation_engine()
         user_uuid = engine.session_manager.generate_user_id()
-        # Set session cookie (ephemeral, deleted on browser close)
+        response.set_cookie("user_uuid", user_uuid)  # 세션 쿠키 (브라우저 닫으면 삭제)
+    elif "user_uuid" not in request.COOKIES:
+        # 로그인 사용자는 기존 쿠키가 없을 때만 발급
+        engine = get_conversation_engine()
+        user_uuid = engine.session_manager.generate_user_id()
         response.set_cookie("user_uuid", user_uuid)
-    
+
     return response
 
 
@@ -152,13 +158,19 @@ def generate_diary(request):
     """
     try:
         user_id = request.COOKIES.get("user_uuid", "guest")
-        
-        # Get conversation engine
-        engine = get_conversation_engine()
-        
+
+        try:
+            engine = get_conversation_engine()
+        except Exception as e:
+            # 엔진 초기화(LLM 키 등) 실패 시 바로 안내
+            return JsonResponse({
+                "success": False,
+                "error": f"대화 엔진 초기화 오류: {str(e)}"
+            }, status=200)
+
         # Generate diary
         diary_result = engine.generate_diary_summary(user_id)
-        
+
         if "다이어리를 생성하지 않았습니다" in diary_result or "생성할 수 없습니다" in diary_result:
             return JsonResponse({
                 "success": False,
