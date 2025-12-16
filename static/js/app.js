@@ -6,14 +6,17 @@ if (window.__LIFECLOVER_APP_INIT__) {
   document.addEventListener('DOMContentLoaded', () => {
     const appRoot = document.querySelector('.app');
     const initialPage = appRoot?.dataset?.currentPage || 'home';
+
+    const authState = window.INITIAL_AUTH_STATE || {};
+
     const state = {
       currentPage: initialPage,
-      isLoggedIn: false,
-      userName: '회원',
-      userProfile: null, // User profile data from login
-      preferredName: null, // User's preferred name
-      mobilityStatus: null, // User's mobility status
-      emotionStatus: null, // User's emotional state
+      isLoggedIn: authState.isAuthenticated || false,
+      userName: authState.username || '회원',
+      userProfile: authState.profile || null,
+      preferredName: authState.profile?.preferred_name || null,
+      mobilityStatus: authState.profile?.mobility_display || null,
+      emotionStatus: authState.profile?.emotion_display || null,
       messagesChat: [],
       messagesInfo: [],
       currentMode: 'chat', // 'chat' or 'info'
@@ -337,15 +340,27 @@ if (window.__LIFECLOVER_APP_INIT__) {
         const logoutBtn = document.createElement('button');
         logoutBtn.className = 'button button-logout';
         logoutBtn.textContent = '로그아웃';
-        logoutBtn.addEventListener('click', () => {
-          state.isLoggedIn = false;
-          state.userName = '회원';
-          state.userProfile = null;
-          state.preferredName = null;
-          state.mobilityStatus = null;
-          state.emotionStatus = null;
-          state.messagesChat = [];
-          renderAuth();
+        logoutBtn.addEventListener('click', async () => {
+          try {
+            const response = await fetch('/api/logout/', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              }
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+              // 로그아웃 성공 시 페이지 새로고침하여 상태 동기화
+              window.location.reload();
+            } else {
+              alert(data.message || '로그아웃에 실패했습니다.');
+            }
+          } catch (error) {
+            console.error('Logout error:', error);
+            alert('로그아웃 중 오류가 발생했습니다.');
+          }
         });
         authContainer.appendChild(deleteBtn);
         authContainer.appendChild(logoutBtn);
@@ -1152,9 +1167,23 @@ if (window.__LIFECLOVER_APP_INIT__) {
 
         if (data.success) {
           alert(data.message || '회원가입이 완료되었습니다!');
+
+          // Update state with profile data from backend
           state.isLoggedIn = true;
           state.userName = username;
+          state.userProfile = data.profile || null;
+          state.preferredName = data.profile?.preferred_name || username;
+          state.mobilityStatus = data.profile?.mobility_display || null;
+          state.emotionStatus = data.profile?.emotion_display || null;
+
           renderAuth();
+
+          // Initialize chat with logged-in user profile
+          state.messagesChat = [];
+          if (state.currentPage === 'chat') {
+            initializeChat();
+          }
+
           switchPage('home');
         } else {
           alert(data.message || '회원가입에 실패했습니다.');

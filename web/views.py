@@ -32,9 +32,42 @@ def get_conversation_engine():
 def index(request, page: str = "home"):
     """Serve the main landing page with the requested section active."""
     safe_page = page if page in {"home", "services", "chat", "diary"} else "home"
+    
     # Ensure CSRF token cookie is set for frontend fetch requests
     get_token(request)
-    response = render(request, "index.html", {"current_page": safe_page})
+    
+    # Prepare initial authentication state for frontend
+    auth_state = {
+        'isAuthenticated': request.user.is_authenticated,
+        'username': '',
+        'profile': None
+    }
+    
+    if request.user.is_authenticated:
+        auth_state['username'] = request.user.username
+        
+        # Get user profile if available
+        try:
+            if hasattr(request.user, 'profile'):
+                profile = request.user.profile
+                auth_state['profile'] = {
+                    'username': request.user.username,
+                    'preferred_name': profile.preferred_name or request.user.username,
+                    'mobility_status': profile.mobility_status or '',
+                    'current_emotion': profile.current_emotion or '',
+                    'mobility_display': profile.get_mobility_status_display() if profile.mobility_status else '',
+                    'emotion_display': profile.get_current_emotion_display() if profile.current_emotion else ''
+                }
+        except Exception as e:
+            print(f"Profile load error: {e}")
+    
+    # Convert auth_state to JSON string for JavaScript
+    auth_state_json = json.dumps(auth_state)
+    
+    response = render(request, "index.html", {
+        "current_page": safe_page,
+        "auth_state_json": auth_state_json
+    })
 
     # 비로그인 사용자는 매 방문마다 새 user_uuid를 발급해 세션 간 기록을 연결하지 않음
     if not request.user.is_authenticated:
@@ -225,7 +258,7 @@ def signup_api(request):
             }, status=400)
         
         # member_manager를 통해 회원가입 처리
-        success, message = member_manager.register_member(
+        result = member_manager.register_member(
             request,
             username=username,
             password=password,
@@ -233,11 +266,25 @@ def signup_api(request):
             checklist_data=checklist_data
         )
         
+        # Unpack result (now returns 3 values: success, message, profile_data)
+        if len(result) == 3:
+            success, message, profile_data = result
+        else:
+            # Fallback for old return format
+            success, message = result
+            profile_data = None
+        
         status_code = 200 if success else 400
-        return JsonResponse({
+        response_data = {
             'success': success,
             'message': message
-        }, status=status_code)
+        }
+        
+        # Add profile data if signup succeeded
+        if success and profile_data:
+            response_data['profile'] = profile_data
+        
+        return JsonResponse(response_data, status=status_code)
         
     except json.JSONDecodeError:
         return JsonResponse({
@@ -366,6 +413,36 @@ def login_view(request):
         else:
             return render(request, 'login.html', {'error': message})
     return render(request, 'login.html')
+
+
+@csrf_exempt
+@require_http_methods(["POST"])
+def logout_api(request):
+    """
+    로그아웃 API
+    Returns JSON: {"success": bool, "message": str}
+    """
+    try:
+        # member_manager를 통해 로그아웃 처리
+        success, message = member_manager.logout_member(request)
+        
+        response = JsonResponse({
+            'success': success,
+            'message': message
+        })
+        
+        # user_uuid 쿠키 삭제하여 다음 로그인 시 새로운 세션 시작
+        if success:
+            response.delete_cookie('user_uuid')
+        
+        return response
+        
+    except Exception as e:
+        print(f"Logout error: {e}")
+        return JsonResponse({
+            'success': False,
+            'message': f'로그아웃 중 오류가 발생했습니다: {str(e)}'
+        }, status=500)
 
 
 @csrf_exempt

@@ -99,8 +99,30 @@ class MemberManager:
                     "conversation_history": []
                 })
                 
+                # 5. 회원가입 후 자동 로그인
+                login(request, user)
+                
+                # 6. 프로필 데이터 준비 (프론트엔드 전달용)
+                profile_data = {
+                    'username': user.username,
+                    'preferred_name': preferred_name or user.username,
+                    'mobility_status': mobility_status or '',
+                    'current_emotion': current_emotion or '',
+                    'mobility_display': '',
+                    'emotion_display': ''
+                }
+                
+                # Get display values if UserProfile exists
+                if UserProfile and hasattr(user, 'profile'):
+                    try:
+                        profile = user.profile
+                        profile_data['mobility_display'] = profile.get_mobility_status_display() if profile.mobility_status else ''
+                        profile_data['emotion_display'] = profile.get_current_emotion_display() if profile.current_emotion else ''
+                    except Exception:
+                        pass
+                
                 logger.info(f"회원가입 완료: {username} (호칭: {preferred_name})")
-                return True, "회원가입이 완료되었습니다."
+                return True, "회원가입이 완료되었습니다.", profile_data
                 
         except Exception as e:
             logger.error(f"회원가입 중 오류 발생: {e}")

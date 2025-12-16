@@ -133,3 +133,9 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Session settings
+# 브라우저를 닫을 때만 로그아웃, 새로고침/페이지 이동 시에는 로그인 상태 유지
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # 브라우저 닫으면 세션 만료
+SESSION_COOKIE_AGE = 86400  # 24시간 (브라우저가 열려있는 동안 최대 유지 시간)
+SESSION_SAVE_EVERY_REQUEST = True  # 매 요청마다 세션 갱신하여 타임아웃 방지
