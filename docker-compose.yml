@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: lifeclover_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-lcdb}
+      MYSQL_USER: ${DB_USER:-django}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-django}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpassword}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # ports:
+    #   - "3306:3306"  # 로컬 MySQL과 충돌 방지를 위해 주석 처리
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  web:
+    build: .
+    container_name: lifeclover_web
+    entrypoint: []  # entrypoint.sh 건너뛰기 (개발용)
+    command: python manage.py runserver 0.0.0.0:8000  # 개발: runserver 사용
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/mediafiles
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME:-lcdb}
+      - DB_USER=${DB_USER:-django}
+      - DB_PASSWORD=${DB_PASSWORD:-django}
+      - DB_PORT=3306
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
+  static_volume:
+  media_volume:
