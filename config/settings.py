@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from dotenv import load_dotenv
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,15 +78,17 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import os
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "lcdb",     # 접속하고자 하는 DB 이름
-        "USER": "django",
-        "PASSWORD": "django",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-        "OPTIONS": {            # 인코딩 관련
+        "NAME": os.getenv("DB_NAME", "lcdb"),
+        "USER": os.getenv("DB_USER", "django"),
+        "PASSWORD": os.getenv("DB_PASSWORD", "django"),
+        "HOST": os.getenv("DB_HOST", "127.0.0.1"),  # Docker에서는 "db", 로컬에서는 "127.0.0.1"
+        "PORT": os.getenv("DB_PORT", "3306"),
+        "OPTIONS": {
             "charset": "utf8mb4"
         }
     }
@@ -128,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
