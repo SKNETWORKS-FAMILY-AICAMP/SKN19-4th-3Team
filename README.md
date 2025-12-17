@@ -151,8 +151,6 @@
 
 # 🪢시스템 아키텍처
 
-<img src="data/image/Architecture_Diagram.png">
-
 ### 프로젝트 구조
 
 ```
@@ -196,6 +194,9 @@ Lifeclover/
 <br>
 
 ### 시스템 아키텍처 구조도
+
+
+<img src="data/image/Architecture_Diagram.png">
 
 <br>
 
@@ -809,6 +810,8 @@ register_member 함수 내에 login() 호출을 넣어 항상 병행되도록 �
 <img src="data/image/preview3.png"><br>
 
 <img src="data/image/preview4.png"><br>
+
+<img src="data/image/preview5.png"><br>
 
 <br>
 
