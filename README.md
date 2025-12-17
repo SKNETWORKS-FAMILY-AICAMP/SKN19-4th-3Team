@@ -405,19 +405,16 @@ Lifeclover/
 
 # 🐛 트러블 슈팅
 
-### 다이어리 "유령 대화" 기록 현상
+### 1. 다이어리 "유령 대화" 기록 현상
 
 - 다이어리를 생성할 때, 사용자가 **로그인한 상태**임에도 불구하고 시스템이 **비회원(게스트)용 ID(쿠키)**로 대화 기록을 찾으려 시도
 - 결과 게스트용 대화내용과, 유저의 대화가 합쳐져 기록됨
-
-<details>
-<summary>다이어리 기록 수정</summary>
 
 <br>
 
 파일 위치: web/views.py
 
-**수정 전 (Before)**
+**수정 전**
 
 - 로그인 여부를 확인하지 않고, 무조건 쿠키 값만 가져옴. 로그인한 유저의 username은 무시.
 
@@ -434,7 +431,7 @@ try:
     # ... (이하 생략) ...
 ```
 
-**수정 후 (After)**
+**조치 내용**
 
 - request.user.is_authenticated를 통해 로그인 여부를 먼저 판단.
 
@@ -456,17 +453,269 @@ try:
     # ... (이하 생략) ...
 ```
 
-**작업 후 테스트**
+**수정 후 확인**
 
 <img src="data/image/trouble_shooting1.webp" width=700><br>
 
 <img src="data/image/trouble_shooting2.webp" width=700><br>
 
+**결과 / 검증 포인트**
+
 → 로그인 여부에 따른 다이어리 생성 확인
 
 <br>
 
-</details>
+---
+
+### 2. 채팅 UI 스크롤 튐 / 레이아웃 흔들림 문제
+
+- 스크롤 시 채팅 메시지 영역이 위아래로 튐/흔들림
+- 메시지 영역과 입력창이 겹치거나 입력창이 떠서 보이는 현상
+- 스크롤바가 여러 개 나타나거나 자동 스크롤이 중간에 멈춤
+- 탭 전환 후에도 레이아웃이 깨진 상태로 유지됨
+
+<br>
+
+**수정 전**
+1. CSS 중복/충돌
+- 동일 요소에 서로 다른 overflow / height / position 규칙이 여러 위치에서 정의됨
+- (예: body.chat-mode, .page-section.active[data-page="chat"/"services"], .chat-shell / .chat-panel / .chat-messages)
+2. 스크롤 컨텍스트 중첩
+- 전역 스크롤(body, 상위 섹션)과 내부 스크롤(.chat-messages)이 동시에 활성화됨
+- 이로 인해 스크롤바 중복 및 자동 스크롤 계산 오류 발생
+3. 입력창 고정 방식 문제
+- 입력창을 position: fixed로 고정한 상태에서 메시지 영역 높이 보정이 일관되지 않아 겹침 및 레이아웃 점프 발생
+
+<br>
+
+**조치 내용**
+1. 스크롤 일원화
+- 메시지 영역(.chat-messages)만 overflow-y: auto 유지
+- body.chat-mode 및 상위 섹션은 스크롤을 차단해 스크롤바를 하나로 통합
+2. 중복 CSS 규칙 정리
+- 채팅 관련 레이아웃(body.chat-mode, .page-section, .chat-shell, .chat-panel, .chat-messages)에서 최종 의도를 반영한 규칙만 남기고 중복 정의 제거
+- 각 속성(overflow, height, position)은 한 곳에서만 책임지도록 정리
+3. 입력창 레이아웃 안정화
+- position: fixed 사용을 제거하고 relative 기반 구조로 통일
+- 입력창은 고정 높이(min-height)를 유지해 레이아웃 변동 방지
+4. 페이지 전환 상태 초기화
+- 탭 전환 시 퀵 패널/오버레이 상태 클래스를 초기화해 이전 페이지 UI가 남지 않도록 처리
+
+<br>
+
+**현재 유지 중인 핵심 규칙 (재발 방지 기준)**
+
+```
+body.chat-mode { overflow: hidden; }
+.chat-messages { overflow-y: auto; padding: 18px; }
+.chat-input-container { position: relative; min-height: 110px; }
+```
+
+<br>
+
+**수정 후 확인**
+
+<img src="data/image/trouble_shooting3.png" width=700><br>
+
+<img src="data/image/trouble_shooting4.png" width=700><br>
+
+**결과 / 검증 포인트**
+- 스크롤바가 하나만 표시됨
+- 메시지 영역과 입력창이 겹치지 않음
+- 스트리밍 응답 중에도 레이아웃이 흔들리지 않음
+- 탭 전환 후에도 자동 스크롤과 레이아웃이 정상 유지
+
+<br>
+
+---
+
+### 3. 브라우저 캐시로 app.js 미반영(0KB / pending) 문제
+
+- 버튼/탭 등 UI가 전혀 동작하지 않음
+- 콘솔에 Unexpected end of input 에러 발생
+- Network 탭에서 app.js가 0KB 또는 pending 상태로 표시됨
+
+<br>
+
+**수정 전**
+- 브라우저가 이전에 캐시된 app.js를 계속 재사용함
+- 캐시된 JS가 불완전한 상태(0KB)로 로드되어 파싱 에러 발생
+- 서버 설정이나 코드 자체의 문제는 아님
+
+<br>
+
+**조치 내용**
+1. 캐시 버스터 적용
+- 정적 스크립트 URL에 버전 쿼리를 추가해 브라우저가 최신 파일을 다시 요청하도록 유도
+
+```  
+  <script src="/static/js/app.js?v=2025-12-14-3"></script>
+```  
+  
+2. 브라우저 캐시 초기화
+- 강력 새로고침: Cmd / Ctrl + Shift + R 또는 시크릿 창에서 재접속
+
+**검증 포인트**
+- Network 탭에서 app.js가 정상 용량(약 44KB)으로 200 응답되는지 확인
+- 콘솔 에러(Unexpected end of input)가 사라지는지 확인
+- 버튼, 탭 등 UI 동작이 정상화되는지 확인
+
+<br>
+
+**재발 방지**
+- 정적 JS 수정 시 버전 쿼리(?v=YYYY-MM-DD-N)를 함께 갱신
+- 배포/병합 후에는 강력 새로고침 또는 시크릿 모드로 최종 검증
+
+<br>
+
+**수정 후 확인**
+
+<img src="data/image/trouble_shooting9.png" width=700><br>
+
+<br>
+
+---
+
+### 4. 여러 계정 로그인 시 대화 내역 혼선
+
+- 하나의 기기에서 여러 계정으로 로그인할 때 챗봇이 각 계정을 별개의 사용자로 인식하지 못함.<br>
+
+- 예시: '김김' 계정으로 로그인<br> 
+→ '김김' 로그아웃<br> 
+→ '밍밍' 계정으로 로그인<br> 
+→ 챗봇: “안녕하세요, 김김님!”
+
+<br>
+
+**수정 전**
+1. 로그아웃 엔드포인트 부재
+- 로그아웃 함수는 존재하지만 이를 호출하는 view 함수가 없음
+2. 프론트엔드 로그아웃 미흡
+- UI를 그리는 코드(app.js)의 로그아웃 버튼이 백엔드를 호출하지 않고 프론트엔드 상태(state)만 초기화
+- 로그아웃 시에도 Django 세션이 종료되지 않아 서버는 여전히 이전 사용자로 인증된 상태 유지
+3. user_uuid 쿠키 미삭제
+- 로그아웃 시 쿠키(user_uuid)가 삭제되지 않아 다음 로그인 시 이전 세션 재사용 위험
+
+**조치 내용**
+1. Logout API 엔드포인트 추가 `web/views.py`
+- 회원관리 모듈(member_manager)과 연결되는 logout_api 함수 추가
+2. 프론트엔드 로그아웃 버튼 수정 `static/js/app.js`
+- 단순히 버튼 표시만 바뀌는 것이 아닌, 내부적으로 Logout API 함수를 호출하여 상태 갱신
+
+<br>
+
+---
+
+### 5. 페이지 이동 시 로그인 상태 미유지
+
+- 다른 페이지로 나갔다 들어왔을 때(Lifeclover 웹페이지를 떠났을 때) 로그인 상태가 유지되지 않음.
+
+**수정 전**
+1. JavaScript 기준의 상태 관리
+- state 객체가 페이지 로드 시 항상 isLoggedIn: false로 초기화
+- 내부 상태와 관계없이 새로고침/페이지 이동 시 ‘로그인 상태’ 손실
+2. 회원 인증 상태 미반영
+- Django 세션은 정상 유지되지만 프론트엔드에 반영되지 않은 상태
+- 초기 렌더링 시 인증 상태를 프론트엔드로 전달하는 로직 없음
+
+<br>
+
+**조치 내용**
+1. 백엔드에서 초기 인증 상태 전달 `web/views.py`
+
+```
+index 함수 수정
+  
+  def index(request,page:str="home"):
+          ...
+          # 인증 상태 준비
+          auth_state={
+                  'isAuthenticated': request.user.is_authenticated,
+                  'username':'',
+                 'profile':None
+          }
+          ...
+          return render(request, "index.html", {
+                  "current_page": safe_page,
+                  "auth_state_json": auth_state_json
+          })
+```  
+
+2. 템플릿에서 JavaScript로 전달 `templates/index.html`
+- 인증 상태를 전달하는 구문 추가
+
+```  
+  <script>
+    window.INITIAL_AUTH_STATE={{ auth_state_json|safe }};
+  </script>
+```
+
+<br>
+
+---
+
+### 6. 회원가입 직후 챗봇이 로그인 상태 미인식
+
+- 회원가입 직후 화면상으로는 '로그아웃' 버튼이 표시되어 로그인 상태인 것처럼 보이지만, 챗봇의 첫인사는 비회원 대상 호칭인 '사용자님'으로 출력됨.
+
+- 예시 :<br>
+'밈밈'으로 회원가입<br>
+UI에는 로그인 버튼이 로그아웃 버튼으로 표시 변경<br>
+챗봇: "안녕하세요, 사용자님!"<br>
+기대값: "안녕하세요, 밈밈님!"<br>
+
+**수정 전**
+1. Django 세션 미로그인
+- 회원가입 함수와 로그인 함수가 서로 이어지지 않음
+- 서버는 여전히 비인증 상태로 인식
+2. 프로필 데이터 미전달
+- 회원가입 API가 프로필 정보를 반환하지 않음
+3. State 불완전 초기화
+- 회원가입 성공 시 state.isLoggedIn = true만 설정
+- state.preferredName = null 상태로 남아 챗봇이 회원의 닉네임을 알지 못함
+
+**조치 내용**
+1. 회원가입과 로그인을 동시에 진행 `web/member_manager.py`
+
+```
+register_member 함수 내에 login() 호출을 넣어 항상 병행되도록 수정
+  
+  def register_member(self, request, username, password, email, checklist_data):
+          ...
+          # 자동 로그인
+          login(request, user)
+          
+          # 프로필 데이터 준비
+          profile_data={
+                  'username': user.username,
+                  'preferred_name': preferred_nameor user.username,
+                  'mobility_display': profile.get_mobility_status_display()if profile.mobility_statuselse'',
+                  'emotion_display': profile.get_current_emotion_display()if profile.current_emotionelse''
+          }
+          
+          return True,"회원가입이 완료되었습니다.", profile_data
+```
+
+2. 프론트엔드 state 완전 초기화 `static/js/app.js`
+
+```
+회원가입 핸들러 수정
+  
+  if(data.success){
+          // 프로필 데이터로 state 업데이트
+          ...
+          
+          renderAuth();
+          
+          // 채팅 초기화 (환영 메시지 재생성)
+          state.messagesChat= [];
+          if (state.currentPage==='chat') {
+                  initializeChat();// "안녕하세요, 밈이님!" 출력
+          }
+          
+          switchPage('home');
+  }
+```
 
 <br>
 
