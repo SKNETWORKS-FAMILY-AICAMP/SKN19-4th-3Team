@@ -339,7 +339,8 @@ Lifeclover/
 
 # 🖥️ 화면 설계서
 
-<img src="data/image/start_page.png" width=700><br>
+
+<img width="966" height="597" alt="스크린샷 2025-12-17 20 42 57" src="https://github.com/user-attachments/assets/54ff34eb-9c81-46fc-a4f8-70ab8980b250" width=700><br>
 
 <img src="data/image/info_page.png" width=700><br>
 
