@@ -195,7 +195,8 @@ Lifeclover/
 
 ### 시스템 아키텍처 구조도
 
-<img width="1407" height="677" alt="Architecture_Diagram" src="https://github.com/user-attachments/assets/e21a238b-3efb-4fd2-b7ad-25cf4a071239" />
+<img width="952" height="498" alt="스크린샷 2025-12-17 15 51 25" src="https://github.com/user-attachments/assets/21b72838-3a63-4fb4-9f5d-2e533f1a2ac5" />
+
 
 <br>
 
