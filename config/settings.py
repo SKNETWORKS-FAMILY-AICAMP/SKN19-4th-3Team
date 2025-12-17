@@ -24,7 +24,7 @@ load_dotenv(dotenv_path=env_path)
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-z3cwa3gyt=eiprl$q+b)-&vy!90imfe$ich&v650169wo%_l%8"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -143,3 +143,4 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # 브라우저 닫으면 세션 만료
 SESSION_COOKIE_AGE = 86400  # 24시간 (브라우저가 열려있는 동안 최대 유지 시간)
 SESSION_SAVE_EVERY_REQUEST = True  # 매 요청마다 세션 갱신하여 타임아웃 방지
+
