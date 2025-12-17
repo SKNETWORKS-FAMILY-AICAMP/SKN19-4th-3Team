@@ -195,8 +195,7 @@ Lifeclover/
 
 ### 시스템 아키텍처 구조도
 
-<img width="952" height="498" alt="스크린샷 2025-12-17 15 51 25" src="https://github.com/user-attachments/assets/21b72838-3a63-4fb4-9f5d-2e533f1a2ac5" />
-
+<img src="data/image/Architecture_Diagram.png">
 
 <br>
 
@@ -309,29 +308,7 @@ Lifeclover/
 
 # *️⃣ 요구사항 명세서
 
-**시작 페이지 관리 (SP)**
-
-<img src="data/image/sp.png"><br>
-
-**안내 페이지 관리 (INFO)**
-
-<img src="data/image/info.png"><br>
-
-**채팅 페이지 관리 (CHAT)**
-
-<img src="data/image/chat.png"><br>
-
-**회원 관리 (MBM)**
-
-<img src="data/image/mbm.png"><br>
-
-**세션 관리 (SES)**
-
-<img src="data/image/ses.png"><br>
-
-**비기능 요구 사항 (NFR)**
-
-<img src="data/image/nfr.png"><br>
+[요구사항 명세서 확인](https://www.notion.so/ohgiraffers/2c0649136c118174b7b3ec38096e25eb)
 
 <br>
 
@@ -339,9 +316,7 @@ Lifeclover/
 
 # 🖥️ 화면 설계서
 
-<img width="961" height="553" alt="스크린샷 2025-12-17 20 42 45" src="https://github.com/user-attachments/assets/5fd2dbaa-2554-481e-9df5-112154781be4" width=700><br>
-
-
+<img src="data/image/start_page.png" width=700><br>
 
 <img src="data/image/info_page.png" width=700><br>
 
@@ -362,6 +337,8 @@ Lifeclover/
 ---
 
 # 💡 테스트 계획 및 결과 보고서
+
+[테스트 계획 및 결과 보고서](https://www.notion.so/ohgiraffers/2c0649136c1181649346e8a49a8bfd29)
 
 <br>
 
